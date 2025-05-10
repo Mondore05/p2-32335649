@@ -23,7 +23,22 @@
                 <label for="expiryMonth">Mes de Expiración:</label>
                 <select id="expiryMonth" name="expiryMonth" required>
                     <option value="">Mes</option>
-                    <% for (let m = 1; m <= 12; m++) { %>
+                    <% const months = [
+                        "Enero", "Febrero", "Marzo", "Abril",
+                        "Mayo", "Junio", "Julio", "Agosto",
+                        "Septiembre", "Octubre", "Noviembre", "Diciembre"
+                    ]; %>
+                    <% for (let m = 0; m < months.length; m++) { %>
+                        <option value="<%= (m + 1).toString().padStart(2, '0') %>"><%= months[m] %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="expiryYear">Año de Expiración:</label>
+                <select id="expiryYear" name="expiryYear" required>
+                    <option value="">Año</option>
+                    <% const currentYear = new Date().getFullYear(); %>
+                    <% for (let y = currentYear; y <= currentYear + 10; y++) { %>
                         <option value="<%= m.toString().padStart(2, '0') %>"><%= m.toString().padStart(2, '0') %></option>
                     <% } %>
                 </select>
