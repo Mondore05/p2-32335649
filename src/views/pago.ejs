@@ -55,38 +55,15 @@
     </form>
 </div>
 
-
-
 <script>
     const form = document.getElementById("paymentForm");
-    const statusMessage = document.getElementById("statusMessage");
     const cardNumberInput = document.getElementById("cardNumber");
 
     form.addEventListener("submit", function (event) {
-        alert("pago realizado");
-        event.preventDefault();
+         event.preventDefault();
 
-        statusMessage.textContent = "Procesando pago...";
-        statusMessage.className = "payment-status processing";
-        statusMessage.style.display = "block";
-
-        setTimeout(() => {
             statusMessage.textContent = "Pago realizado";
-            statusMessage.className = "payment-status success";
             form.reset();
-        }, 3000);
-    });
-
-
-    cardNumberInput.addEventListener("input", function () {
-        let value = this.value.replace(/\D/g, '');
-        value = value.slice(0, 16); 
-        let formatted = value.match(/.{1,4}/g); 
-        this.value = formatted ? formatted.join(' ') : '';
-    });
-
-    // CVV solo números
-    document.getElementById("cvv").addEventListener("input", function () {
-        this.value = this.value.replace(/\D/g, "");
-    });
+   
+        });
 </script>
