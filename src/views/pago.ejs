@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .card-number {
+            letter-spacing: 2px;
+        }
+        
+        .expiration-date {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .expiration-date select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .cvv-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cvv-container input {
+            width: 80px;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        
+        table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pago</h1>
+    
+    <div class="form-group">
+        <label for="email"><strong>Correo Electrónico:</strong></label>
+        <input type="email" id="email" placeholder="Correo Electrónico">
+    </div>
+    
+    <div class="form-group">
+        <label for="card-name"><strong>Nombre del Titular de la Tarjeta:</strong></label>
+        <input type="text" id="card-name" placeholder="Nombre en la Tarjeta">
+    </div>
+    
+    <div class="form-group">
+        <label for="card-number"><strong>Número de Tarjeta:</strong></label>
+        <input type="text" id="card-number" class="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+    </div>
+    
+    <div class="form-group">
+        <label><strong>Fecha de Expiración:</strong></label>
+        <table>
+            <tr>
+                <td>Mes</td>
+                <td>Año</td>
+            </tr>
+            <tr>
+                <td>
+                    <select>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <!-- Más meses -->
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <!-- Más años -->
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="form-group">
+        <label><strong>Código de Seguridad (CVV/CVC):</strong></label>
+        <table>
+            <tr>
+                <td>CVC</td>
+                <td><input type="number" placeholder="" maxlength="3"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <hr>
+    
+    <button type="submit" class="submit-btn">Realizar Pago</button>
+</body>
+</html>
