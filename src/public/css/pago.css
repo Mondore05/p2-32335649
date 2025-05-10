@@ -27,7 +27,20 @@ label {
     font-weight: bold;
     color: #333;
 }
+ 
+h2 {
+    display:flex;
+    font-size: 5cap;
+    margin-left:20%;
+}
 
+.payment-form {
+    display: block;
+    background-color: aqua;
+    text-align: center;
+    padding: 20px;
+
+}
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -38,7 +51,7 @@ select {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't increase the element's total width */
+    box-sizing: border-box;
     font-size: 16px;
 }
 

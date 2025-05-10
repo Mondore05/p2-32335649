@@ -5,6 +5,9 @@ const router: Router = Router();
 
 router.get("/", homeGet);
 
+router.get('/contacto', (req, res) => {
+  res.render('contacto');
+});
 
 router.get('/pago', (req, res) => {
   res.render('pago');

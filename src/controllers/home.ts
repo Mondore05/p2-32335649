@@ -10,4 +10,7 @@ export const pago = (req: Request, res: Response) => {
   res.render('pago');
 };
 
+export const contacto = (req: Request, res: Response) => {
+  res.render('contacto');
+};
 export default homeGet;
