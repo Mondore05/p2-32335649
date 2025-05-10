@@ -5,6 +5,7 @@ const homeGet = (req: Request, res: Response) => {
     res.render("inicio", { data: "express" });
 }
 
+// Ruta para la vista de pago
 export const pago = (req: Request, res: Response) => {
   res.render('pago');
 };
