@@ -9,6 +9,10 @@ router.get('/contacto', (req, res) => {
   res.render('contacto');
 });
 
+router.get('/comentarios', (req, res) => {
+  res.render('comentarios');
+});
+
 router.get('/pago', (req, res) => {
   res.render('pago');
 });

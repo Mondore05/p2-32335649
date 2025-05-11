@@ -1,9 +1,48 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #16a34a;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .contact-container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 2%;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Comentarios</title>
-    <link rel="stylesheet" href="/css/contacto.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garden</title>
 </head>
 <body>
     <div class="contact-container">
@@ -17,13 +56,6 @@
                 </tr>
             </thead>
             <tbody>
-                <% comentarios.forEach(function(comentario) { %>
-                    <tr>
-                        <td><%= comentario.correo %></td>
-                        <td><%= comentario.usuario %></td>
-                        <td><%= comentario.comentario %></td>
-                    </tr>
-                <% }); %>
             </tbody>
         </table>
     </div>

@@ -10,6 +10,10 @@ export const pago = (req: Request, res: Response) => {
   res.render('pago');
 };
 
+export const comentarios = (req: Request, res: Response) => {
+  res.render('comentarios');
+};
+
 export const contacto = (req: Request, res: Response) => {
   res.render('contacto');
 };
